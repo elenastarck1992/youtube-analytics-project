@@ -40,5 +40,5 @@ class Channel:
                 "url": self.url
 
                 }
-        with open(file_name, "w", encoding="utf-8") as file:
-            json.dump(data, file, ensure_ascii=False, indent=4)
+        with open(file_name, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=4)
