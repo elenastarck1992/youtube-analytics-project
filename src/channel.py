@@ -17,8 +17,8 @@ class Channel:
         self.subscribers = int(self.channel["items"][0]["statistics"]["subscriberCount"])
         self.url = f'https://www.youtube.com/channel/{channel_id}'
 
-    def __str__(self):
-        return f'{self.title} {self.url}'
+    # def __str__(self):
+    #     return f'{self.title} {self.url}'
 
     @classmethod
     def get_service(cls):
@@ -66,3 +66,4 @@ class Channel:
     def __le__(self, other):
         """Метод сравнения: одно число <= другого. Возвращает булевое значение"""
         return self.subscribers <= other.subscribers
+
