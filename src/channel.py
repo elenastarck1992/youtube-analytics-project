@@ -66,4 +66,3 @@ class Channel:
     def __le__(self, other):
         """Метод сравнения: одно число <= другого. Возвращает булевое значение"""
         return self.subscribers <= other.subscribers
-
