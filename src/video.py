@@ -16,11 +16,11 @@ class Video:
             self.like_count = self.video['items'][0]['statistics']['likeCount']
         except IndexError:
             print("Введен некорректрый ID видео.")
-            self.video = None
-            self.title = None
-            self.view_count = None
-            self.video_url = None
-            self.like_count = None
+        self.video = None
+        self.title = None
+        self.view_count = None
+        self.video_url = None
+        self.like_count = None
 
     @classmethod
     def get_service(cls):
