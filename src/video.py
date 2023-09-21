@@ -6,8 +6,8 @@ class Video:
     api_key = os.getenv('YT_API_KEY')
 
     def __init__(self, video_id: str):
+        self.video_id = video_id
         try:
-            self.video_id = video_id
             self.video = self.get_service().videos().list(part='snippet,statistics,contentDetails,topicDetails',
                                                           id=video_id).execute()
             self.title = self.video['items'][0]['snippet']['title']
@@ -16,7 +16,6 @@ class Video:
             self.like_count = self.video['items'][0]['statistics']['likeCount']
         except IndexError:
             print("Введен некорректрый ID видео.")
-            self.video_id = video_id
             self.video = None
             self.title = None
             self.view_count = None
