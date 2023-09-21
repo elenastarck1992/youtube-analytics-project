@@ -14,7 +14,7 @@ class Video:
             self.view_count = self.video['items'][0]['statistics']['viewCount']
             self.video_url = f"https://www.youtube.com/watch?v={video_id}"
             self.like_count = self.video['items'][0]['statistics']['likeCount']
-        except:
+        except IndexError:
             print("Введен некорректрый ID видео.")
             self.video_id = video_id
             self.video = None
